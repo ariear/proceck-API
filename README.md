@@ -20,6 +20,8 @@ This API built with Express JS 🌸
 
 **Base Url** : `https://proceck-api.vercel.app`
 
+
+## Endpoint only for indonesian country
 | Game | Usage | Example |
 |----------|-------|---------|
 | Free Fire | `/api/ff/:id` | `/api/ff/402173620` |
@@ -27,3 +29,7 @@ This API built with Express JS 🌸
 | Arena Of Valor | `/api/aov/:id` | `/api/aov/160148795294877` |
 | Cal Of Duty Mobile | `/api/cod/:id` | `/api/cod/8370310025568788107` |
 
+---
+
+#### Credits
+Copyright © 2022 Arie Akbarull Ridho
