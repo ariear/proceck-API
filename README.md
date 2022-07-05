@@ -19,3 +19,11 @@ This API built with Express JS 🌸
 ### Endpoint Usage
 
 **Base Url** : `https://proceck-api.vercel.app`
+
+| Game | Usage | Example |
+|----------|-------|---------|
+| Free Fire | `/api/ff/:id` | `/api/ff/402173620` |
+| Mobile Legends | `/api/ml/13486/:id` | `/api/ml/13486/1114917746` |
+| Arena Of Valor | `/api/aov/:id` | `/api/aov/160148795294877` |
+| Cal Of Duty Mobile | `/api/cod/:id` | `/api/cod/8370310025568788107` |
+
