@@ -37,3 +37,38 @@ export const checkAccountFF = async (req, res) => {
         })
     }
 }
+
+export const checkAccountML = async (req, res) => {
+    const body = `voucherPricePoint.id=4150&voucherPricePoint.price=1579.0&voucherPricePoint.variablePrice=0&user.userId=${req.params.id}&user.zoneId=${req.params.zoneid}&voucherTypeName=MOBILE_LEGENDS&shopLang=id_ID`
+    
+    try {
+        const ml = await axios.post(endpoint,body, {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
+        const mlresult = ml.data
+        console.log(mlresult);
+        if (mlresult.errorCode === 1003) {
+            res.status(404).json({
+                status: 404,
+                message: 'Id not Found'
+            })
+        }else {
+            res.status(200).json({
+                status: 200,
+                response: {
+                    game: 'Mobile Legends',
+                    id: mlresult.confirmationFields.userId,
+                    name: mlresult.confirmationFields.username,
+                    country: mlresult.confirmationFields.country
+                }
+            })
+        }
+    } catch (error) {
+        res.status(504).json({
+            status: 504,
+            message: 'Error Gateway Timeout'
+        })
+    }
+}

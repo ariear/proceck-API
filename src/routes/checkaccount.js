@@ -1,6 +1,9 @@
 import express from 'express'
-import { checkAccountFF } from '../controller/checkaccountController.js'
+import { checkAccountFF, checkAccountML } from '../controller/checkaccountController.js'
 
-const app = express()
+const checkaccount = express()
 
-export const getff = app.get('/ff/:id', checkAccountFF)
+checkaccount.get('/ff/:id', checkAccountFF)
+checkaccount.get('/ml/:zoneid/:id', checkAccountML)
+
+export default checkaccount
