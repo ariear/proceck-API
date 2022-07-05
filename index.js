@@ -7,4 +7,6 @@ const app = express()
 app.use(endpoint)
 app.use('/api/', checkaccount)
 
-app.listen(3000)
+app.listen(3000, () => {
+    console.log('App Running on http://localhost:3000')
+})
