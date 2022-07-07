@@ -1,6 +1,7 @@
 # Proceck-API
 The minimal Mobile Game checker
 
+Thanks to https://github.com/ihsangan/valid for API
 ---
 ![Group 7 (1)](https://user-images.githubusercontent.com/91861324/177327347-7a609c5c-8760-4969-9932-d9535e9ea987.png)
 
@@ -37,6 +38,3 @@ This API built with Express JS 🌸
 | Sausage Man | `/api/sm/:id` | `/api/sm/5sn9jf` |
 
 ---
-
-#### Credits
-Copyright © 2022 Arie Akbarull Ridho
